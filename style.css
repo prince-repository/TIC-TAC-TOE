@@ -1,0 +1,175 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+ 
+  position: relative;
+  background: linear-gradient(to bottom, azure, lightcyan);
+}
+
+#tic_tac_toe {
+  min-height: 70%;
+  min-width: 50%;
+margin-bottom: 100px;
+  display: grid;
+  place-items: center;
+  background-color: azure;
+  background: linear-gradient(to bottom, azure, lightcyan);
+
+  box-shadow: 2px 2px 2px 2px rgb(139, 123, 123),
+    -2px -2px 2px rgb(171, 164, 164);
+}
+.player {
+  /* margin-bottom: 20px; */
+  height: 30px;
+  width: 250px;
+  /* border: 2px solid orange; */
+  padding: 0 7px 0 7px;
+  user-select: none;
+}
+.players {
+  height: 35px;
+  width: 115px;
+
+  background-color: aqua;
+  padding-left: 20px;
+  box-shadow: 3px 3px 7px rgb(164, 177, 170), -3px -3px 7px rgb(171, 193, 181);
+  font-size: 22px;
+  font-weight: 1000;
+  font-family: monospace;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  
+}
+#player1 {
+  float: left;
+  transition: all 0.4s ease;
+}
+#player2 {
+  float: right;
+  transition: all 0.4s ease;
+}
+
+.title {
+  height: 30px;
+  font-size: 17px;
+  font-weight: 1200;
+  display: flex;
+  flex-direction: row;
+  color: red;
+  text-shadow: 3px 3px 10px red;
+  font-family: cursive;
+  user-select: none;
+ margin-bottom: 20px;
+}
+
+.boxes {
+  height: 230px;
+  width: 230px;
+  /* border: 2px dotted orange; */
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+
+.box {
+  height: 70px;
+  width: 70px;
+
+  background-color: aqua;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 900;
+  font-family: sans-serif;
+  color: deeppink;
+
+  box-shadow: 3px 3px 3px rgb(41, 186, 106);
+  user-select: none;
+  cursor: pointer;
+  text-shadow: 2px 2px  5px deeppink;
+  box-shadow: 3px 3px 3px rgb(41, 186, 106);
+}
+
+button {
+  margin-top: 10px;
+  height: 50px;
+  width: 100px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  box-shadow: inset 2px 2px 2px 10px black, -2px -2px 15px black;
+  cursor: pointer;
+  user-select: none;
+  animation: rotation 7s linear infinite;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 2px white;
+}
+
+@keyframes rotation {
+  0% {
+    background-color: blueviolet;
+    border: 2px solid blueviolet;
+    box-shadow: inset 2px 2px 2px 10px blueviolet, -2px -2px 15px blueviolet;
+  }
+
+  25% {
+    background-color: red;
+    border: 2px solid red;
+    box-shadow: inset 2px 2px 2px 10px red, -2px -2px 15px red;
+  }
+  50% {
+    background-color: aqua;
+    border: 2px solid aqua;
+    box-shadow: inset 2px 2px 2px 10px aqua, -2px -2px 15px aqua;
+  }
+
+  75% {
+    background-color: blue;
+    border: 2px solid blue;
+    box-shadow: inset 2px 2px 2px 10px blue, -2px -2px 15px blue;
+  }
+  100% {
+    background-color: springgreen;
+    border: 2px solid springgreen;
+    box-shadow: inset 2px 2px 2px 10px springgreen, -2px -2px 15px springgreen;
+  }
+}
+
+button:hover {
+  width: 170px;
+  box-shadow: inset 2px 2px 2px 10px aqua, -2px -2px 15px aqua;
+
+  color: black;
+  font-weight: 900;
+}
+
+.popup {
+  position: absolute;
+  height: 200px;
+  width: 250px;
+
+  /* background-color:blueviolet; */
+  color: red;
+   padding-top: 40px;
+  padding-left: 80px;
+  margin-bottom: 30px;
+  border-radius: 40px;
+  background-color:mintcream;
+  font-size: 16px;
+  box-shadow: inset 1px 1px  1px rgb(168, 159, 159),-1px -1px 1px rgb(168, 159, 159);
+}
